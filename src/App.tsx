@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { createViewState, JBrowseApp } from '@jbrowse/react-app'
 import '@fontsource/roboto'
 
@@ -12,7 +13,25 @@ function View() {
 
   useEffect(() => {
     const state = createViewState({
-      config,
+      config: {
+        ...config,
+
+        // remove this and the makeWorkerInstance if you do not want to use web
+        // workers
+        configuration: {
+          rpc: {
+            defaultDriver: 'WebWorkerRpcDriver',
+          },
+        },
+      },
+
+      hydrateFn: hydrateRoot,
+      createRootFn: createRoot,
+      makeWorkerInstance: () => {
+        return new Worker(new URL('./rpcWorker', import.meta.url), {
+          type: 'module',
+        })
+      },
     })
     setViewState(state)
   }, [])
