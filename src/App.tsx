@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import { createViewState, JBrowseApp } from '@jbrowse/react-app'
-import '@fontsource/roboto'
-
+import MSAViewPlugin from 'jbrowse-plugin-msaview'
+import Protein3DPlugin from 'jbrowse-plugin-protein3d'
 import config from './config'
 
 type ViewModel = ReturnType<typeof createViewState>
+console.log({ MSAViewPlugin, Protein3DPlugin })
 
 function View() {
   const [viewState, setViewState] = useState<ViewModel>()
-  const [stateSnapshot, setStateSnapshot] = useState('')
 
   useEffect(() => {
     const state = createViewState({
+      // @ts-expect-error
+      plugins: [MSAViewPlugin, Protein3DPlugin],
       config: {
         ...config,
 
-        // remove this and the makeWorkerInstance if you do not want to use web
-        // workers
+        // remove this and the makeWorkerInstance if you do not want to use
+        // web workers
         configuration: {
           rpc: {
             defaultDriver: 'WebWorkerRpcDriver',
@@ -36,46 +38,11 @@ function View() {
     setViewState(state)
   }, [])
 
-  if (!viewState) {
-    return null
-  }
-
-  return (
+  return viewState ? (
     <>
-      <h1>JBrowse 2 React App Demo (with vite)</h1>
       <JBrowseApp viewState={viewState} />
-      <h3>Code</h3>
-      <p>
-        The code for this app is available at{' '}
-        <a
-          href="https://github.com/GMOD/jbrowse-react-app-vite-demo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://github.com/GMOD/jbrowse-react-app-vite-demo
-        </a>
-        .
-      </p>
-
-      <h3>See the state</h3>
-      <div>
-        <p>
-          The button below will show you the current session, which includes
-          things like what region the view is showing and which tracks are open.
-          This session JSON object can be used in the{' '}
-          <code>defaultSession</code> of <code>createViewState</code>.
-        </p>
-        <button
-          onClick={() => {
-            setStateSnapshot(JSON.stringify(viewState.session, undefined, 2))
-          }}
-        >
-          Show session
-        </button>
-      </div>
-      <textarea value={stateSnapshot} readOnly rows={20} cols={80} />
     </>
-  )
+  ) : null
 }
 
 export default View
