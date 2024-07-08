@@ -15,8 +15,8 @@
     "@jbrowse/core": "^2.0.0",
     "@jbrowse/react-app": "^2.0.0",
     "@types/node": "^20.10.4",
-    "jbrowse-plugin-protein3d": "^0.0.2",
     "jbrowse-plugin-msaview": "^2.0.0",
+    "jbrowse-plugin-protein3d": "^0.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
