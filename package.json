@@ -12,7 +12,8 @@
     "postdeploy": "aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/protein/*\""
   },
   "dependencies": {
-    "@jbrowse/core": "^2.0.0",
+    "@emotion/react": "^11.11.4",
+    "@jbrowse/core": "^2.12.3",
     "@jbrowse/react-app": "^2.0.0",
     "@types/node": "^20.10.4",
     "jbrowse-plugin-msaview": "^2.0.0",
