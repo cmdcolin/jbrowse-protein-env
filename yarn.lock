@@ -1987,7 +1987,7 @@ clsx@^2.1.0, clsx@^2.1.1:
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
-clustal-js@^2.0.1:
+clustal-js@^2.0.0, clustal-js@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/clustal-js/-/clustal-js-2.0.1.tgz#485b23334950fc2040067b799dda432b0a6a7273"
   integrity sha512-rdntqVPd4tromWENkOz1P/XACIFLaHPhQ1hwBmEbLFVBn5s6oRLMEvgMf63k0y2gk81ti2vecWwFOlhGLOuFfw==
@@ -2147,6 +2147,13 @@ d3-array@2, d3-array@^2.3.0:
   dependencies:
     internmap "^1.0.0"
 
+d3-array@^3.2.3:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-3.2.4.tgz#15fec33b237f97ac5d7c986dc77da273a8ed0bb5"
+  integrity sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==
+  dependencies:
+    internmap "1 - 2"
+
 "d3-color@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-color/-/d3-color-2.0.0.tgz#8d625cab42ed9b8f601a1760a389f7ea9189d62e"
@@ -2161,6 +2168,11 @@ d3-color@^3.0.2:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-2.0.0.tgz#a10bcc0f986c372b729ba447382413aabf5b0767"
   integrity sha512-Ab3S6XuE/Q+flY96HXT0jOXcM4EAClYFnRGY5zsjRGNy6qCYrQsMffs7cV5Q9xejb35zxW5hf/guKw34kvIKsA==
+
+d3-hierarchy@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/d3-hierarchy/-/d3-hierarchy-3.1.2.tgz#b01cd42c1eed3d46db77a5966cf726f8c09160c6"
+  integrity sha512-FX/9frcub54beBdugHjDCdikxThEqjnR93Qt7PvQTOHxyiNCAlvMrHhclk3cD5VeAaq9fxmfRp+CnWw9rEMBuA==
 
 "d3-interpolate@1 - 2", "d3-interpolate@1.2.0 - 2", d3-interpolate@^2.0.1:
   version "2.0.1"
@@ -2603,7 +2615,7 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
-file-saver@^2.0.0:
+file-saver@^2.0.0, file-saver@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
   integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
@@ -2684,7 +2696,7 @@ functions-have-names@^1.2.3:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-g2p_mapper@^1.0.3:
+g2p_mapper@^1.0.3, g2p_mapper@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/g2p_mapper/-/g2p_mapper-1.0.4.tgz#243730c33d92b093f61a18b05479465f67bd8612"
   integrity sha512-Os3yuQZcTSuGbO4A7NuXmcfIu80IeOjyZYZ4Eow9Af0sb6IlcmymcA99gYjRUk4enKjRFAXjnCw6Y4rw7S7yww==
@@ -2921,6 +2933,11 @@ internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
+"internmap@1 - 2":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/internmap/-/internmap-2.0.3.tgz#6685f23755e43c524e251d29cbc97248e3061009"
+  integrity sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==
+
 internmap@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/internmap/-/internmap-1.0.1.tgz#0017cc8a3b99605f0302f2b198d272e015e5df95"
@@ -3114,6 +3131,15 @@ isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
+
+jbrowse-plugin-msaview@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jbrowse-plugin-msaview/-/jbrowse-plugin-msaview-2.0.0.tgz#7d3353b46a8fa6a23e68b69fc8f21dc8dc9d92c3"
+  integrity sha512-UCUqFNwS722pR+29GC8mui4G1VwB5ZwfY0n0hpl+v0E2I6bSVcPH2+t6mCyF5JjkCSqdNsv53cW6CJ3sH1eRbw==
+  dependencies:
+    g2p_mapper "^1.0.4"
+    pako "^2.1.0"
+    react-msaview "^3.0.3"
 
 jbrowse-plugin-protein3d@^0.0.2:
   version "0.0.2"
@@ -3674,6 +3700,11 @@ node-releases@^2.0.14:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.14.tgz#2ffb053bceb8b2be8495ece1ab6ce600c4461b0b"
   integrity sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==
 
+normalize-wheel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/normalize-wheel/-/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
+  integrity sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==
+
 object-assign@^4, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -3917,7 +3948,7 @@ react-dropzone@^14.2.1:
     file-selector "^0.6.0"
     prop-types "^15.8.1"
 
-react-error-boundary@^4.0.0, react-error-boundary@^4.0.3:
+react-error-boundary@^4.0.0, react-error-boundary@^4.0.13, react-error-boundary@^4.0.3:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-4.0.13.tgz#80386b7b27b1131c5fbb7368b8c0d983354c7947"
   integrity sha512-b6PwbdSv8XeOSYvjt8LpgpKrZ0yGdtZokYwkwV2wlcZbxgopHX/hgPl5VgpnoVOWd868n1hktM8Qm4b+02MiLQ==
@@ -3954,6 +3985,24 @@ react-merge-refs@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
+
+react-msaview@^3.0.3:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/react-msaview/-/react-msaview-3.1.10.tgz#9a71c34ae3bb0a0bafa63d7bbe781b24d484aea0"
+  integrity sha512-PNXk0ZiuO+sm1iK4J3I66x2zjKVzcjTdMLfATF6hlkI8peJhc3m+EJkfMYQaaRNgJrUqcbUKOfv61YKcfKQ3AQ==
+  dependencies:
+    clustal-js "^2.0.0"
+    colord "^2.9.3"
+    copy-to-clipboard "^3.3.1"
+    d3-array "^3.2.3"
+    d3-hierarchy "^3.1.2"
+    file-saver "^2.0.5"
+    normalize-wheel "^1.0.1"
+    rbush "^3.0.1"
+    react-error-boundary "^4.0.13"
+    rollup "^4.9.1"
+    stockholm-js "^1.0.10"
+    svgcanvas "^2.5.0"
 
 react-refresh@^0.14.2:
   version "0.14.2"
@@ -4067,7 +4116,7 @@ resolve@^1.19.0:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
-rollup@^4.13.0:
+rollup@^4.13.0, rollup@^4.9.1:
   version "4.18.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-4.18.0.tgz#497f60f0c5308e4602cf41136339fbf87d5f5dda"
   integrity sha512-QmJz14PX3rzbJCN1SG4Xe/bAAX2a6NpCP8ab2vfu2GiUr8AQcr2nCV/oEO3yneFarB67zk8ShlIyWb2LGTb3Sg==
@@ -4280,6 +4329,11 @@ statuses@2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
+stockholm-js@^1.0.10:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/stockholm-js/-/stockholm-js-1.0.13.tgz#c831b349eafa8d413ea556878876f5be52dd93c8"
+  integrity sha512-fHh5B0rOJu8cvaO2YfL0qa5aD1ZR/lls85MuRlRpVSs05vGR6k+nqezB8JQOek88pVDxddB4wwLlNOnlq9G3cw==
+
 stream-browserify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
@@ -4394,6 +4448,11 @@ svg-path-generator@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/svg-path-generator/-/svg-path-generator-1.1.0.tgz#058ad4a095eabbc5e2e91b66299e5063e4ac9afb"
   integrity sha512-eapn3syFa828HJRI3Wv+ceq7K/TUo/wA31w5oyerA3CNz02YkLM8aSjXA851+0qhc1ibihiJHxy54eacm2/euQ==
+
+svgcanvas@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/svgcanvas/-/svgcanvas-2.5.0.tgz#04a22d2d94c402235bf260e85195d40213a78d7f"
+  integrity sha512-ZNnhijO9gNTkTy+r4fOpV8ZS79JmeXqdl3ruKWLXB7E9DPnD3BEBkspKH9HwoDdbV8VJ8m/Kkg4YJZEzn0EJxQ==
 
 swagger-ui-dist@^5.17.14:
   version "5.17.14"

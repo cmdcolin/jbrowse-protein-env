@@ -6,20 +6,15 @@ import Protein3DPlugin from 'jbrowse-plugin-protein3d'
 import config from './config'
 
 type ViewModel = ReturnType<typeof createViewState>
-console.log({ MSAViewPlugin, Protein3DPlugin })
 
 function View() {
   const [viewState, setViewState] = useState<ViewModel>()
 
   useEffect(() => {
     const state = createViewState({
-      // @ts-expect-error
       plugins: [MSAViewPlugin, Protein3DPlugin],
       config: {
         ...config,
-
-        // remove this and the makeWorkerInstance if you do not want to use
-        // web workers
         configuration: {
           rpc: {
             defaultDriver: 'WebWorkerRpcDriver',

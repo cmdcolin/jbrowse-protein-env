@@ -139,124 +139,100 @@ const config = {
         },
       },
     },
+    {
+      type: 'FeatureTrack',
+      trackId: 'gencode.v44.annotation.sorted.gff3',
+      name: 'GENCODE v44',
+      category: ['Annotation'],
+      adapter: {
+        type: 'Gff3TabixAdapter',
+        gffGzLocation: {
+          uri: 'https://jbrowse.org/demos/app/gencode.v44.annotation.sorted.gff3.gz',
+          locationType: 'UriLocation',
+        },
+        index: {
+          location: {
+            uri: 'https://jbrowse.org/demos/app/gencode.v44.annotation.sorted.gff3.gz.tbi',
+            locationType: 'UriLocation',
+          },
+          indexType: 'TBI',
+        },
+      },
+      assemblyNames: ['hg38'],
+      displays: [
+        {
+          type: 'LinearBasicDisplay',
+          displayId: 'gencode_nclist_v36_hg38_linear',
+          renderer: {
+            type: 'SvgFeatureRenderer',
+            labels: {
+              name: "jexl:get(feature,'gene_name')",
+            },
+            displayMode: 'compact',
+          },
+        },
+      ],
+    },
   ],
   defaultSession: {
-    name: 'this session',
+    proteinModel: {},
+    drawerPosition: 'right',
+    drawerWidth: 384,
+    widgets: {
+      GridBookmark: {
+        id: 'GridBookmark',
+        type: 'GridBookmarkWidget',
+      },
+      hierarchicalTrackSelector: {
+        id: 'hierarchicalTrackSelector',
+        type: 'HierarchicalTrackSelectorWidget',
+        initialized: true,
+        collapsed: {},
+        view: 'zgz_-Qr7nNbi83nJXNLnQ',
+        faceted: {
+          filterText: '',
+          showSparse: false,
+          showFilters: true,
+          showOptions: false,
+          panelWidth: 400,
+        },
+      },
+    },
+    activeWidgets: {
+      hierarchicalTrackSelector: 'hierarchicalTrackSelector',
+    },
+    minimized: false,
+    id: 'VoDejwePg3JzkR359IHy5',
+    name: 'New session 2/1/2024, 9:44:04 PM',
     margin: 0,
     views: [
       {
-        id: 'linearGenomeView',
+        id: 'zgz_-Qr7nNbi83nJXNLnQ',
         minimized: false,
         type: 'LinearGenomeView',
-        offsetPx: 191980240,
-        bpPerPx: 0.1554251851851852,
+        offsetPx: 251760.671875,
+        bpPerPx: 203.3819319131076,
         displayedRegions: [
           {
-            refName: '10',
+            refName: '1',
             start: 0,
-            end: 133797422,
+            end: 248956422,
             reversed: false,
-            assemblyName: 'GRCh38',
+            assemblyName: 'hg38',
           },
         ],
         tracks: [
           {
-            id: '4aZAiE-A3',
-            type: 'ReferenceSequenceTrack',
-            configuration: 'GRCh38-ReferenceSequenceTrack',
+            id: 'Qe2eoyISqdWQdDz0g6q62',
+            type: 'FeatureTrack',
+            configuration: 'gencode.v44.annotation.sorted.gff3',
             minimized: false,
             displays: [
               {
-                id: 'AD3gqvG0_6',
-                type: 'LinearReferenceSequenceDisplay',
-                height: 180,
-                configuration:
-                  'GRCh38-ReferenceSequenceTrack-LinearReferenceSequenceDisplay',
-                showForward: true,
-                showReverse: true,
-                showTranslation: true,
-              },
-            ],
-          },
-          {
-            id: 'T6uhrtY40O',
-            type: 'AlignmentsTrack',
-            configuration: 'NA12878.alt_bwamem_GRCh38DH.20150826.CEU.exome',
-            minimized: false,
-            displays: [
-              {
-                id: 'FinKswChSr',
-                type: 'LinearAlignmentsDisplay',
-                PileupDisplay: {
-                  id: 'YAAaF494z',
-                  type: 'LinearPileupDisplay',
-                  height: 134,
-                  configuration: {
-                    type: 'LinearPileupDisplay',
-                    displayId:
-                      'NA12878.alt_bwamem_GRCh38DH.20150826.CEU.exome-LinearAlignmentsDisplay_LinearPileupDisplay_xyz',
-                  },
-                  showSoftClipping: false,
-                  filterBy: {
-                    flagInclude: 0,
-                    flagExclude: 1540,
-                  },
-                },
-                SNPCoverageDisplay: {
-                  id: 'VTQ_VGbAVJ',
-                  type: 'LinearSNPCoverageDisplay',
-                  height: 45,
-                  configuration: {
-                    type: 'LinearSNPCoverageDisplay',
-                    displayId:
-                      'NA12878.alt_bwamem_GRCh38DH.20150826.CEU.exome-LinearAlignmentsDisplay_snpcoverage_xyz',
-                  },
-                  selectedRendering: '',
-                  resolution: 1,
-                  constraints: {},
-                  filterBy: {
-                    flagInclude: 0,
-                    flagExclude: 1540,
-                  },
-                },
-                snpCovHeight: 45,
-                configuration:
-                  'NA12878.alt_bwamem_GRCh38DH.20150826.CEU.exome-LinearAlignmentsDisplay',
-                height: 179,
-                lowerPanelType: 'LinearPileupDisplay',
-              },
-            ],
-          },
-          {
-            id: 'EUnTnpVI6',
-            type: 'QuantitativeTrack',
-            configuration: 'hg38.100way.phyloP100way',
-            minimized: false,
-            displays: [
-              {
-                id: 'mrlawr9Wtg',
-                type: 'LinearWiggleDisplay',
-                height: 100,
-                configuration: 'hg38.100way.phyloP100way-LinearWiggleDisplay',
-                selectedRendering: '',
-                resolution: 1,
-                constraints: {},
-              },
-            ],
-          },
-          {
-            id: 'Cbnwl72EX',
-            type: 'VariantTrack',
-            configuration:
-              'ALL.wgs.shapeit2_integrated_snvindels_v2a.GRCh38.27022019.sites.vcf',
-            minimized: false,
-            displays: [
-              {
-                id: 'dvXz01Wf6w',
-                type: 'LinearVariantDisplay',
-                height: 100,
-                configuration:
-                  'ALL.wgs.shapeit2_integrated_snvindels_v2a.GRCh38.27022019.sites.vcf-LinearVariantDisplay',
+                id: '4r-xItqHFJ0-Iqd4NGWC-',
+                type: 'LinearBasicDisplay',
+                heightPreConfig: 250,
+                configuration: 'gencode_nclist_v36_hg38_linear',
               },
             ],
           },
@@ -265,12 +241,21 @@ const config = {
         hideHeaderOverview: false,
         hideNoTracksActive: false,
         trackSelectorType: 'hierarchical',
-        trackLabels: 'overlapping',
         showCenterLine: false,
         showCytobandsSetting: true,
+        trackLabels: '',
         showGridlines: true,
+        showBookmarkHighlights: true,
+        showBookmarkLabels: true,
       },
     ],
+    sessionTracks: [],
+    sessionAssemblies: [],
+    temporaryAssemblies: [],
+    connectionInstances: [],
+    sessionConnections: [],
+    focusedViewId: 'zgz_-Qr7nNbi83nJXNLnQ',
+    sessionPlugins: [],
   },
 }
 
